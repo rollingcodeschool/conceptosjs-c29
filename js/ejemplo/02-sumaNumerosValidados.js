@@ -13,11 +13,11 @@ const numero2 = parseInt(prompt("Ingresa el segundo número"));
     }
 */
 console.log(isNaN(numero1));
-//operador logico NOT !
+//operador logico NOT !, AND &&
 // !true = false
 // !false = true
-
-if (!isNaN(numero1)){
+// el contenido de la variable numero1 es un numero Y el contenido de la variable numero2 es un numero
+if (!isNaN(numero1) && !isNaN(numero2)){
     const resultado = numero1 + numero2;
     console.log("El resultado es: " + resultado);
 }else{
