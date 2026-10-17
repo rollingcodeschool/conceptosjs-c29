@@ -21,7 +21,6 @@ console.log(frase.toLocaleLowerCase()) // muestra el contenido de frase en minus
 
 if(frase.charAt(0) === 'a' || frase.charAt(0) === 'e' || frase.charAt(0) === 'i' || frase.charAt(0) === 'o' || frase.charAt(0) === 'u'){
     console.log(frase.charAt(0))
-    document.writeln
 }
 if(frase.charAt(1) === 'a' || frase.charAt(1) === 'e' || frase.charAt(1) === 'i' || frase.charAt(1) === 'o' || frase.charAt(1) === 'u'){
     console.log(frase.charAt(1))
