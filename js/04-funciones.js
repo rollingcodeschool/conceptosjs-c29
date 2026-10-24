@@ -10,22 +10,26 @@ function saludarPersona(nombrePersona){
 }
 
 //funiones que retornan un valor
-function sumar(numero1, numero2){
-    const resultado = numero1 + numero2
-    return resultado
-    // el return siempre es la ultima linea de codigo de la funcion
-    // console.log(resultado)
-}
+// function sumar(numero1, numero2){
+//     return numero1 + numero2
+//     // el return siempre es la ultima linea de codigo de la funcion
+//     // console.log(resultado)
+// }
+
+// arrow functions
+const sumar = (numero1, numero2) => numero1 + numero2 //return implicito
+
 
 //invocar a una funcion
 saludar()
 
-const nombre = prompt('ingresa tu nombre')
-saludarPersona(nombre)
-saludarPersona('Leandro')
+// const nombre = prompt('ingresa tu nombre')
+// saludarPersona(nombre)
+// saludarPersona('Leandro')
 
 const numero1 = Number(prompt('ingresa el primer número'))
 const numero2 = Number(prompt('ingresa el segundo número'))
 
 const resultado = sumar(numero1, numero2)
 console.log('El resultado de la suma es: '+ resultado)
+
