@@ -3,17 +3,14 @@ function saludar(){
     //todas las lineas de codigo que quiero que haga saludar
     alert('hola mundo 🌎')
 }
+//funciones con parametros
+function saludarPersona(nombrePersona){
+    alert(`Hola ${nombrePersona}, bienvenido a nuestro sistema.`)
+}
 
 //invocar a una funcion
 saludar()
 
-console.log('mas codigo por aqui')
-console.log('mas codigo por aqui')
-console.log('mas codigo por aqui')
-console.log('mas codigo por aqui')
-console.log('mas codigo por aqui')
-console.log('mas codigo por aqui')
-
-saludar()
-saludar()
-saludar()
+const nombre = prompt('ingresa tu nombre')
+saludarPersona(nombre)
+saludarPersona('Leandro')
