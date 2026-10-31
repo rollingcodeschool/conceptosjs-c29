@@ -9,6 +9,7 @@ const mostrarPeliculas = (titulo) => {
   //mostrar el html en pantalla
   div.innerHTML = textoHTML;
 };
+
 //declarar un array vacio
 const colores = [];
 const peliculas = [
@@ -65,3 +66,22 @@ mostrarPeliculas(`Eliminamos una pelicula del medio del array - Total peliculas:
 //modificar elementos del array
 peliculas[5] = 'Godzilla x Kong: Supernova'
 mostrarPeliculas(`Modificamos una pelicula del medio del array - Total peliculas: ${peliculas.length}`)
+
+peliculas.splice(peliculas.length -2, 1)
+mostrarPeliculas(`Eliminamos un valor booleano del array - Total peliculas: ${peliculas.length}`)
+
+//metodos especiales para trabajar con arrays
+const peliBuscada = prompt('Ingresa una pelicula')
+const peliEncontrada = peliculas.find((peli) => peli.toLowerCase() === peliBuscada.toLowerCase() )
+const peliNoEncontrada = peliculas.find((peli) => peli === 'Paranormal Activity 8' )
+//nullish= false, 0, '', null, undifined
+if(peliEncontrada){
+  alert(`La peli ${peliEncontrada}, esta en nuestro catálogo`)
+}else{
+   alert(`No tenemos esa peli aún`)
+}
+console.log(peliEncontrada)
+console.log(peliNoEncontrada)
+
+
+
