@@ -38,4 +38,26 @@ const div = document.getElementById("pantalla");
 let textoHTML = "";
 
 //mostramos el array
-mostrarPeliculas('Array de peliculas inicial')
+mostrarPeliculas(`Array de peliculas inicial - Total peliculas: ${peliculas.length}`)
+
+//agregar elementos en el array
+peliculas.unshift(false, "Avengers: Doomsdays") //este metodo envia elementos al inicio del array
+mostrarPeliculas(`Agregamos dos peliculas al inicio - Total peliculas: ${peliculas.length}`)
+
+peliculas.push('La odisea', 2026)
+mostrarPeliculas(`Agregamos dos peliculas al final del array - Total peliculas: ${peliculas.length}`)
+
+peliculas.splice(3, 0, 'rapidos y furiosos')
+mostrarPeliculas(`Agregamos una pelicula en el medio del array - Total peliculas: ${peliculas.length}`)
+
+//como eliminar elementos del array
+peliculas.shift()
+mostrarPeliculas(`Eliminamos una pelicula del inicio del array - Total peliculas: ${peliculas.length}`)
+
+peliculas.pop()
+mostrarPeliculas(`Eliminamos una pelicula del final del array - Total peliculas: ${peliculas.length}`)
+
+// peliculas.splice(3, 2) // borrar dos elementos del array
+// peliculas.splice(3) // borrar todos los elementos desde la posicion 3 inclusive
+peliculas.splice(3, 1)
+mostrarPeliculas(`Eliminamos una pelicula del medio del array - Total peliculas: ${peliculas.length}`)
