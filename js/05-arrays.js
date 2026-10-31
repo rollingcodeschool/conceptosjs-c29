@@ -61,3 +61,7 @@ mostrarPeliculas(`Eliminamos una pelicula del final del array - Total peliculas:
 // peliculas.splice(3) // borrar todos los elementos desde la posicion 3 inclusive
 peliculas.splice(3, 1)
 mostrarPeliculas(`Eliminamos una pelicula del medio del array - Total peliculas: ${peliculas.length}`)
+
+//modificar elementos del array
+peliculas[5] = 'Godzilla x Kong: Supernova'
+mostrarPeliculas(`Modificamos una pelicula del medio del array - Total peliculas: ${peliculas.length}`)
