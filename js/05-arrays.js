@@ -115,3 +115,11 @@ const peliculasOrdenadas = [...peliculas]
 // console.log(peliculas)
 // console.log(peliculasOrdenadas)
 mostrarPeliculasOrdenadas()
+
+//filtrar valores de un array
+const terminoBuscado = prompt('Ingresa la pelicula buscada').toLowerCase()
+
+const peliculasFiltradas = peliculas.filter((pelicula)=> pelicula.toLowerCase().includes(terminoBuscado) )
+
+console.log(peliculasFiltradas)
+
