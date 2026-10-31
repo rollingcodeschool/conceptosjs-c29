@@ -10,6 +10,21 @@ const mostrarPeliculas = (titulo) => {
   div.innerHTML = textoHTML;
 };
 
+const mostrarPeliculasOrdenadas = () => {
+  //mostrar un array
+  textoHTML += `<h2 class="my-3">Peliculas ordenadas</h2>`;
+  //ordenar el array
+  // peliculasOrdenadas.sort()// ordena de la A-Z y luego a-z
+  peliculasOrdenadas.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base"}))
+  console.log(peliculasOrdenadas)
+
+  textoHTML += '<ul class= "list-group">';
+  peliculasOrdenadas.forEach((item)=> textoHTML += `<li class= "list-group-item">${item}</li>` )
+  textoHTML += "</ul>";
+  //mostrar el html en pantalla
+  div.innerHTML = textoHTML;
+};
+
 //declarar un array vacio
 const colores = [];
 const peliculas = [
@@ -72,7 +87,10 @@ mostrarPeliculas(`Eliminamos un valor booleano del array - Total peliculas: ${pe
 
 //metodos especiales para trabajar con arrays
 const peliBuscada = prompt('Ingresa una pelicula')
-const peliEncontrada = peliculas.find((peli) => peli.toLowerCase() === peliBuscada.toLowerCase() )
+// const peliEncontrada = peliculas.find((peli) => peli.toLowerCase() === peliBuscada.toLowerCase() )
+// const peliEncontrada = peliculas.find((item) => condicion logica )
+const peliEncontrada = peliculas.find((peli) => peli.toLowerCase().includes(peliBuscada.toLowerCase()) )
+
 const peliNoEncontrada = peliculas.find((peli) => peli === 'Paranormal Activity 8' )
 //nullish= false, 0, '', null, undifined
 if(peliEncontrada){
@@ -83,5 +101,17 @@ if(peliEncontrada){
 console.log(peliEncontrada)
 console.log(peliNoEncontrada)
 
+//como funciona include
+const prueba = 'Endgame'
+console.log(peliculas[3].includes(prueba))
+console.log(peliculas[3].includes('Infinity war'))
 
+//cuando queremos copiar el contenido del array en uno nuevo, usamos el operador spread ...
+const peliculasOrdenadas = [...peliculas]
+// console.log(peliculas)
+// console.log(peliculasOrdenadas)
 
+// peliculas.push('Sonic 4')
+// console.log(peliculas)
+// console.log(peliculasOrdenadas)
+mostrarPeliculasOrdenadas()
