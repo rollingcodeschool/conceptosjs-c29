@@ -1,3 +1,10 @@
+const mostrar= ()=>{
+    let texto = `<h2>Pelicula: ${pelicula.nombre} </h2>`
+    for(let clave in pelicula){
+        texto += `<p>${clave}: ${pelicula[clave]} </p>`
+    }
+    return texto
+}
 // auto -> propiedades: precio, color, marca, 
 // auto -> metodo: arrancar(), detener(), actualizarPrecio(nuevoPrecio)
 
@@ -44,4 +51,8 @@ textoHTML += `<p>Tipo de pelicula: ${pelicula.tipo}</p>`
 pelicula.tipo = '2D'
 textoHTML += `<p>Tipo de pelicula: ${pelicula.tipo}</p>`
 
-div.innerHTML = textoHTML
+//como borrar una propiedad del objeto
+delete pelicula.actores
+
+div.innerHTML = textoHTML + mostrar()
+
